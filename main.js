@@ -1,2 +1,2 @@
-console.log('main.js');
 console.log($);
+console.log('main.js');
