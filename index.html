@@ -8,15 +8,33 @@
    <link rel="stylesheet" type="text/css" href="main.css">
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href= "bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <script src="bower_components/Processing.js/processing.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="main.js" charset="utf-8"></script>
+  <script type="application/javascript" language="javascript">
+
+window.onload = draw;
+function draw () {
+  //assing our canvas element to a variable
+  var canvas = document.getElementById ("canvas1");
+  //create the HTML5 context object to enable draw methods
+  var ctx = canvas.getContext("2d");
+  //fill style (r,g,b, alpha);
+  ctx.fillStyle = "rgba(0,200,0,1)";
+  //fillRect(X,Y, width, height);
+  ctx.fillRect(36,10,22,12);
+}
+
+
+
+
+
+  </script>
 
 </head>
 <body>
   <div id="banner">
     <div id="banner_backdrop">Score: 25
-       <canvas data-processing-sources="processing.pde"></canvas>
+       <canvas id="canvas1" width="900" height="180"></canvas>
     <div id="character"></div>
     </div>
     <div id = "banner_content">
