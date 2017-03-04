@@ -18,14 +18,29 @@ function draw () {
   var canvas = document.getElementById ("canvas1");
   //create the HTML5 context object to enable draw methods
   var ctx = canvas.getContext("2d");
-  //fill style (r,g,b, alpha);
-  ctx.fillStyle = "rgba(0,200,0,1)";
-  //fillRect(X,Y, width, height);
-  ctx.fillRect(36,10,22,12);
+
+var circle = function (x,y) {
+  fill(252, 65, 65);
+  ellipse(19, 32, 82, 81);
 }
 
+var character = function (x,y) {
+  this.x = x;
+  this.y = y;
+  this.img = function () {
+        $('#circle');
+    }
+}
 
+character.prototype.draw = function() {
+ this.y = constrain(this.y, 0, height-90);
+ image(this.img, 50, this.y, 40, 40);
+};
+}
 
+character.draw();
+
+};
 
 
   </script>
@@ -34,8 +49,7 @@ function draw () {
 <body>
   <div id="banner">
     <div id="banner_backdrop">Score: 25
-       <canvas id="canvas1" width="900" height="180"></canvas>
-    <div id="character"></div>
+       <canvas id="canvas1" width="800" height="280"></canvas>
     </div>
     <div id = "banner_content">
     <img src = "https://lh5.ggpht.com/x3jSIgAZAwzUuoEpGCYXzfdUQgV64wCEQryldXAh_AaoqLGMKqKl8jfMNYtNBKlUZyM=w170" id="burger" alt="burger"/>
