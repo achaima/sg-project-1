@@ -8,6 +8,7 @@
    <link rel="stylesheet" type="text/css" href="main.css">
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href= "bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/Processing.js/processing.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="main.js" charset="utf-8"></script>
 
@@ -15,12 +16,15 @@
 <body>
   <div id="banner">
     <div id="banner_backdrop">Score: 25
+      <div id="status"></div>
     <div id="character"></div>
     </div>
     <div id = "banner_content">
     <img src = "https://lh5.ggpht.com/x3jSIgAZAwzUuoEpGCYXzfdUQgV64wCEQryldXAh_AaoqLGMKqKl8jfMNYtNBKlUZyM=w170" id="burger" alt="burger"/>
     </div>
   </div>
+
+   <canvas data-processing-sources="hello-web.pde"></canvas>
 
 </body>
 </html>
