@@ -1,4 +1,5 @@
-body {
+
+/*body {
   margin: 48px;
   background: #000;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,27 +8,27 @@ body {
 
 #banner {
   width: 1000px;
-  height: 200px;
+  height: 230px;
   margin: 0px auto;
   border: white 1px solid;
   overflow: hidden;
-}
+}*/
 
   /* the overflow allows you to hide everything from outside that box*/
 
-  #banner_backdrop {
+  /*#banner_backdrop {
     position: relative;
     width: 1320px;
-    height: 200px;
-    background: url('https://i.stack.imgur.com/WHu9Z.png') repeat-x;
+    height: 230px;*/
+    /*background: url('https://i.stack.imgur.com/WHu9Z.png') repeat-x;*/
   }
-
+/*
 #banner_content {
   position: relative;
   width: 96%;
-  height: 180px;
+  height: 170px;
   margin: 20px auto;
-  top:-210px;
+  top:-230px;
   border: 1px solid black;
   -webkit-animation: backdrop_roll linear 15s infinite;
   -moz-animation: backdrop_roll linear 15s infinite;
@@ -56,11 +57,11 @@ body {
   background-color: yellow;
   width: 30px;
   height: 30px;
-  margin-top: 140px;
+  margin-top: 160px;
 }
 
 #burger {
   position: absolute;
   width:20px;
   height: 20px;
-}
+}*/
