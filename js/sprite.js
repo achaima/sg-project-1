@@ -19,6 +19,7 @@ Sprite.prototype.moveAndDraw = function () {
 
 Sprite.prototype.move = function () {
   this.x += this.vx;
+  this.y += this.vy;
 };
 
 Sprite.prototype.draw = function () {

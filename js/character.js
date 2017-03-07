@@ -1,4 +1,4 @@
-/* global Sprite */
+/* global Sprite*/
 
 function Character(context) {
   this.context = context;
@@ -7,7 +7,7 @@ function Character(context) {
 
 // Initialise the Character.
 Character.prototype.init = function () {
-  this.sprite = new Sprite(this.context, 'images/character.png', 60, 60, 50, 380, 0, 0, 20, 0.4);
+  this.sprite = new Sprite(this.context, 'images/pacman.png', 60, 60, 50, 380, 0, -5, 1, 0.1);
 };
 
 Character.prototype.move = function () {
@@ -23,7 +23,7 @@ Character.prototype.move = function () {
   if (this.sprite.y <= 0) {
     this.sprite.vy = 1;
   }
-//BOTTOM BOUNDARY
+  //BOTTOM BOUNDARY
   if (this.sprite.y >= this.context.canvas.height - (this.sprite.height+40)) {
     this.sprite.vy = 0;
   }
