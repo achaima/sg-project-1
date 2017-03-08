@@ -5,19 +5,31 @@ src: url(press_start_2p/PressStart2P.ttf);
 
 
 body {
-  background-color: black;
-  font-family: 'Press Start 2P', cursive;
-
-}
-
-button {
-  width:190px;
-  height: 70px;
-  background-color: green;
-  color: white;
-  border: 3px solid white;
   font-family: 'Press Start 2P', cursive;
 }
+
+
  #start {
    margin-left: 600px;
+ }
+
+
+ #close {
+   background-color: black;
+   color:white;
+ }
+
+ #myBtn {
+   background-color: black;
+   color: white;
+   font-size: 10px;
+   height: 60px;
+ }
+
+.modal-body {
+  margin-left: 50px;
+  color:black;
+}
+ img {
+   margin-left: 100px;
  }

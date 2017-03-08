@@ -7,7 +7,7 @@ function Character(context) {
 
 // Initialise the Character.
 Character.prototype.init = function () {
-  this.sprite = new Sprite(this.context, 'images/pacman.png', 60, 60, 50, 380, 0, -5, 1, 0.1);
+  this.sprite = new Sprite(this.context, 'images/pacman.png', 60, 60, 50, 380, 0, -5, 2, 0.1);
 };
 
 Character.prototype.move = function () {
