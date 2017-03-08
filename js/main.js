@@ -25,7 +25,7 @@ $(function(){
     cabbages.push(new Cabbage(context, canvas));
   }
 
-  // Directional Control SPACE KEY
+  // SPACE KEY
   $(document).keydown(function(key) {
     if(key.keyCode === 32) {
       character.sprite.vy = -2;
@@ -36,11 +36,13 @@ $(function(){
 
   function mainLoop() {
 
+
   //CANVAS
     context.clearRect(0, 0, canvas.width, canvas.height);
     canvas.width = 1320;
     canvas.height = 520;
     canvas.style = 'border: 3px solid black; text-align: center; margin-left:50px; background-image: url("images/back.png")' ;
+
 
 //Character
     character.sprite.draw();
@@ -68,7 +70,7 @@ $(function(){
 
   mainLoop();
 
-//COLLISION
+//COLLISION burger
   function myCollisions(first , second) {
     first = first.sprite;
     second = second.sprite;
@@ -83,6 +85,7 @@ $(function(){
     }
   }
 
+//COLLISION cabbage
   function cabbageCollisions(one, two) {
     one = one.sprite;
     two = two.sprite;
@@ -93,6 +96,7 @@ $(function(){
     }
   }
 
+//Score
   function drawScore() {
     context.font = '18px Arial';
     context.fillStyle = '#F0F8FF';

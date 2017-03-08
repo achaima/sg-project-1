@@ -18,13 +18,14 @@ Character.prototype.move = function () {
     this.sprite.vy += this.sprite.weight;
   }
 
+  //BOTTOM BOUNDARY
+  if (this.sprite.y >= this.context.canvas.height - (this.sprite.height+40)) {
+    this.sprite.vy = 0;
+  }
   //CANVAS BOUNDARIES
   //TOP BOUNDARY
   if (this.sprite.y <= 0) {
     this.sprite.vy = 1;
   }
-  //BOTTOM BOUNDARY
-  if (this.sprite.y >= this.context.canvas.height - (this.sprite.height+40)) {
-    this.sprite.vy = 0;
-  }
+
 };

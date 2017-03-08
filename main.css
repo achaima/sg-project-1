@@ -6,6 +6,7 @@ src: url(press_start_2p/PressStart2P.ttf);
 
 body {
   font-family: 'Press Start 2P', cursive;
+  background-color: yellow;
 }
 
 
