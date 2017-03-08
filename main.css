@@ -1,19 +1,22 @@
-@font-face {
+/*@font-face {
 font-family:arcadeFont;
 src: url(press_start_2p/PressStart2P.ttf);
-}
-
+}*/
 
 
 body {
   background-color: black;
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 button {
-  width:120px;
+  width:190px;
   height: 70px;
   background-color: green;
   color: white;
+  border: 3px solid white;
+  font-family: 'Press Start 2P', cursive;
 }
  #start {
    margin-left: 600px;
