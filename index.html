@@ -15,12 +15,36 @@
 
 <body>
 
+<!--CANVAS-->
  <div id="canvas-holder">
-    <canvas id="canvas1"></canvas>
+    <canvas id="canvas1" style="display: none;"></canvas>
   </div>
 
-  <div class="container">
+  <!--Start Screen-->
+    <div class="container">
+    <div id="SplashScreen">
+
+<div class="row">
+    <h1>Burger Hop</h1>
+</div>
+
+<!--Icon-->
+<div class="row">
+<div id="banner">
+   <div id="banner_backdrop"></div>
+  <div id = "banner_content">
+ <img src="images/burger.png" alt="Burger Icon" id="burgerIcon">
+  </div>
+ </div>
+ </div>
+
+
+<!--Start button-->
+<div class="row">
+    <button type="button" class="btn btn-default" value="Start" id="StartButton">Start</button>
+<!--Instructions button-->
     <button type="button" class="btn btn-info btn-md" id="myBtn">Instructions</button>
+</div>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -30,8 +54,6 @@
         <div class="modal-content">
           <div class="modal-body">
             <p>Aim: Collect as many burgers as you can</p>
-            <p>Min:20</p>
-            <p>Max:25</p>
 
             <img src="images/spacebar.png" alt="spacebar"/>
             <p>Press to go up</p>
@@ -41,11 +63,28 @@
           </div>
         </div>
 
+        </div>
       </div>
     </div>
   </div>
 
+  <!--GAME OVER-->
+  <div class="container">
 
+  <div class="gameOver">
+    <h1>Game Over</h1>
+</div>
+    <div id="win">
+    <h2>You win!</h2>
+  </div>
+
+  <div id="lose">
+    <h2>You lose!</h2>
+  </div>
+
+</div>
+
+<!--JS files--->
   <script src="js/sprite.js" charset="utf-8"></script>
   <script src="js/character.js" charset="utf-8"></script>
   <script src="js/burger.js" charset="utf-8"></script>
