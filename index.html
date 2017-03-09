@@ -10,7 +10,6 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
 </head>
 
 <body>
@@ -20,7 +19,7 @@
     <canvas id="canvas1" style="display: none;"></canvas>
   </div>
 
-  <!--Start Screen-->
+<!--Start Screen-->
     <div class="container">
     <div id="SplashScreen">
 
@@ -40,58 +39,60 @@
 
 
 <!--Start button-->
-<div class="row">
+ <div class="row">
     <button type="button" class="btn btn-default" value="Start" id="StartButton">Start</button>
 <!--Instructions button-->
     <button type="button" class="btn btn-info btn-md" id="myBtn">Instructions</button>
 </div>
 
 <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+<div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog">
 
 <!-- Modal content-->
-    <div class="modal-content">
-    <div class="modal-body">
-    <img src="images/cabbage.png" class="img-thumbnail" alt="cabbage">
-    <p class="let">Reduces points by one </p>
+  <div class="modal-content">
+   <div class="modal-body">
+  <img src="images/cabbage.png" class="img-thumbnail" alt="cabbage">
+  <p class="let">Reduces points by one </p>
 
 
 <div class="row">
-        <img src="images/burger.png" class="img-thumbnail" alt="burger">
-        <p class="let">Increases point by one</p>
+  <img src="images/burger.png" class="img-thumbnail" alt="burger">
+  <p class="let">Increases point by one</p>
 </div>
 
 <div class="row">
-            <img src="images/spacebar.png" alt="spacebar"/>
-            <p>Press space key to go up</p>
+  <img src="images/spacebar.png" alt="spacebar"/>
+  <p>Press space key to go up</p>
+ </div>
 </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
-          </div>
-        </div>
+
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
 
         </div>
       </div>
+
+      </div>
     </div>
   </div>
+</div>
 
-  <!--GAME OVER-->
-  <div class="container">
-
-
+<!--GAME OVER-->
+<div class="container">
   <div class="gameOver">
     <h1>Game Over</h1>
-</div>
-    <div id="win">
+  </div>
+
+  <div id="win">
     <h2>You win!</h2>
     <button type="button" class="btn btn-info btn-md" id="playAgainWin">Play again!</button>
   </div>
 
   <div id="lose">
     <h2>You lose!</h2>
-      <button type="button" class="btn btn-info btn-md" id="playAgainLose">Play again!</button>
+    <button type="button" class="btn btn-info btn-md" id="playAgainLose">Play again!</button>
   </div>
 
 </div>
@@ -102,6 +103,7 @@
   <script src="js/burger.js" charset="utf-8"></script>
   <script src="js/cabbage.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
+
 </body>
 
 </html>

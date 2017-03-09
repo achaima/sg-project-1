@@ -1,17 +1,16 @@
 /* global Burger, Character, Cabbage*/
 
-//Instructions button
+
   $(document).ready(function(){
+    //Hiding screens
     $('.gameOver').hide();
     $('#win').hide();
     $('#lose').hide();
+    //Modal instructions button
     $('#myBtn').click(function(){
       $('#myModal').modal('toggle');
-
     });
-
   });
-
 
 //EVENTS ----------------------------------------------------------------------
 //Start screen
@@ -40,7 +39,7 @@
       cabbages.push(new Cabbage(context, canvas));
     }
 
-    // SPACE KEY MOVEMENT
+    // SPACE KEY CODE
     $(document).keydown(function(key) {
       if(key.keyCode === 32) {
         character.sprite.vy = -2;
@@ -49,9 +48,7 @@
 
 
   // MAIN LOOP ----------------------------------------------------------------
-
     function mainLoop() {
-
 
   //CANVAS CREATION
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -60,46 +57,45 @@
       canvas.style = 'border: 3px solid black; text-align: center; margin-left:50px; background-image: url("images/back.png")' ;
 
 
-//Character MOVEMENT
+//CHARACTER MOVEMENT AND PLACEMENT ON CANVAS
       character.sprite.draw();
       character.move();
 
-
-  //Burger movement
+//BURGER MOVEMENT AND PLACEMENT ON CANVAS
       for (var i = 0 ; i < burgers.length ; i++) {
         burgers[i].sprite.moveAndDraw();
         if (myCollisions(character, burgers[i])) break;
       }
 
- //Cabbage movement
+ //CABBAGE MOVEMENT AND PLACEMENT ON CANVAS
       for (var a = 0 ; a < cabbages.length ; a++) {
         cabbages[a].sprite.moveAndDraw();
         if (cabbageCollisions(character, cabbages[a])) break;
       }
 
-//Score
+//SCORE
       drawScore();
 
-
-  // Loop Time
+//LOOP TIME
       setTimeout(mainLoop, 7);
     }
 
+//GAME OVER TIMEOUT
     setTimeout(function () {
-      if(score < 5) {
+      if(score < 25) {
         $('.gameOver').show();
         $('#lose').show();
         $('#playAgainLose').click(function(){
           document.location.reload();
         });
       }
-    }, 20000);
+    }, 30000);
 
 
     mainLoop();
 
 
-//COLLISION burger
+//COLLISION SCORE
     function myCollisions(first , second) {
       first = first.sprite;
       second = second.sprite;
@@ -107,17 +103,16 @@
        && first.y  + first.height >= second.y &&  first.y <= (second.y + second.height)) {
         second.y = -420;
         score ++;
-        if(score === 5) {
+        if(score === 25) {
           $('#win').show();
           $('#playAgainWin').click(function(){
             document.location.reload();
           });
-
         }
       }
     }
 
-  //COLLISION cabbage
+  //COLLISION CABBAGE - DECREASE SCORE
     function cabbageCollisions(first, second) {
       first = first.sprite;
       second = second.sprite;
@@ -128,7 +123,7 @@
       }
     }
 
-  //Score
+  //SCORE FUNCTION
     function drawScore() {
       context.font = '18px Arial';
       context.fillStyle = '#F0F8FF';

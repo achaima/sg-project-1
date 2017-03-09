@@ -1,8 +1,13 @@
-/*@font-face {
-font-family:arcadeFont;
-src: url(press_start_2p/PressStart2P.ttf);
-}*/
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: lightgray;
+  text-align: center;
+}
 
+h1 {
+  font-size:50px;
+  text-shadow:-3px 0 red;
+}
 
 #banner {
     width: 500px;
@@ -11,7 +16,6 @@ src: url(press_start_2p/PressStart2P.ttf);
     border: black 3px solid;
     overflow: hidden;
   }
-
     /* the overflow allows you to hide everything from outside that box*/
 
 #banner_backdrop {
@@ -49,12 +53,26 @@ src: url(press_start_2p/PressStart2P.ttf);
     to { right: 320px; }
   }
 
+  #burgerIcon {
+    height:180px;
+    width:200px;
+    border-radius: 10px;*/
+  }
 
-body {
-  font-family: 'Press Start 2P', cursive;
-  background-color: lightgray;
-  text-align: center;
-}
+  .btn {
+    width: 180px;
+    height:60px;
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    border: 2px solid black;
+  }
+
+  .btn:hover {
+    background-color: #1E90FF;
+    color: white;
+  }
+
 
 p {
   font-size: 10px;
@@ -66,13 +84,14 @@ p {
   margin-left: 20px;
 }
 
-.let {
+.instructions {
   display: inline-block;
 }
 
-h1 {
-  font-size:50px;
-  text-shadow:-3px 0 red;
+
+#canvas-holder {
+  margin-top: 50px;
+  margin-right:50px;
 }
 
 h2 {
@@ -97,41 +116,4 @@ h2 {
 
 .row {
   margin-top: 20px;
-}
-
-#canvas-holder {
-  margin-top: 50px;
-  margin-right:50px;
-}
-
-
-
-#burgerIcon {
-  height:200px;
-  width:200px;
-  border-radius: 10px;*/
-}
-
-.btn {
-  width: 180px;
-  height:60px;
-  background-color: red;
-  color: white;
-  font-size: 11px;
-  border: 2px solid black;
-}
-
-
-.btn:hover {
-  background-color: #1E90FF;
-  color: white;
-}
- #close {
-   background-color: black;
-   color:white;
- }
-
-
-.modal-body {
-  color:black;
 }

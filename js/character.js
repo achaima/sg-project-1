@@ -14,11 +14,11 @@ Character.prototype.init = function () {
 Character.prototype.move = function () {
   this.sprite.y += this.sprite.vy;
 
-  //WEIGHT and GRAVITY CHARACTER
+  //WEIGHT and GRAVITY OF CHARACTER
   if(this.sprite.vy < this.sprite.gravity) {
     this.sprite.vy += this.sprite.weight;
   }
-
+  
   //CANVAS BOUNDARIES
   //TOP BOUNDARY
   if (this.sprite.y <= 0) {
