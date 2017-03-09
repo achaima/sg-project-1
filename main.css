@@ -56,6 +56,20 @@ body {
   text-align: center;
 }
 
+p {
+  font-size: 10px;
+}
+
+.img-thumbnail {
+  height: 50px;
+  width:50px;
+  margin-left: 20px;
+}
+
+.let {
+  display: inline-block;
+}
+
 h1 {
   font-size:50px;
   text-shadow:-3px 0 red;
@@ -71,7 +85,7 @@ h2 {
   width: 280px;
   background-color: red;
   position: absolute;
-  bottom: 70px;
+  bottom: 150px;
   left: 50%;
   margin-left: -140px;
   z-index: 20;
@@ -84,6 +98,13 @@ h2 {
 .row {
   margin-top: 20px;
 }
+
+#canvas-holder {
+  margin-top: 50px;
+  margin-right:50px;
+}
+
+
 
 #burgerIcon {
   height:200px;
@@ -109,6 +130,7 @@ h2 {
    background-color: black;
    color:white;
  }
+
 
 .modal-body {
   color:black;

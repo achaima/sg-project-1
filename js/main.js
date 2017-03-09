@@ -29,6 +29,7 @@
     var cabbages= [];
     var score = 0;
 
+
   //BURGER LOOP TO ADD BURGERS TO EMPTY ARRAY
     for (var i = 1; i <= numberOfBurgers; i++) {
       burgers.push(new Burger(context, canvas));
@@ -46,21 +47,10 @@
       }
     });
 
-    // setTimeout(function () {
-    //   $('.gameOver').show();
-    //   if (score >= 25) {
-    //     $('#win').show();
-    //   } else {
-    //     $('#lose').show();
-    //   }
-    // }, 30000);
 
   // MAIN LOOP ----------------------------------------------------------------
 
     function mainLoop() {
-
-  //TIMER
-      // $('.gameOver').hide();
 
 
   //CANVAS CREATION
@@ -96,10 +86,14 @@
     }
 
     setTimeout(function () {
-      $('.gameOver').show();
-      $('#lose').show();
-
-    }, 10000);
+      if(score < 5) {
+        $('.gameOver').show();
+        $('#lose').show();
+        $('#playAgainLose').click(function(){
+          document.location.reload();
+        });
+      }
+    }, 20000);
 
 
     mainLoop();
@@ -113,9 +107,9 @@
        && first.y  + first.height >= second.y &&  first.y <= (second.y + second.height)) {
         second.y = -420;
         score ++;
-        if(score === 1) {
-          $('.gameOver').html('<h1>You Win!</h1> <div class="win-btn">Play Again</div>').show();
-          $('.win-btn').click(function(){
+        if(score === 5) {
+          $('#win').show();
+          $('#playAgainWin').click(function(){
             document.location.reload();
           });
 

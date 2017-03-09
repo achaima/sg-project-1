@@ -46,17 +46,26 @@
     <button type="button" class="btn btn-info btn-md" id="myBtn">Instructions</button>
 </div>
 
-    <!-- Modal -->
+<!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
+    <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-body">
-            <p>Aim: Collect as many burgers as you can</p>
+<!-- Modal content-->
+    <div class="modal-content">
+    <div class="modal-body">
+    <img src="images/cabbage.png" class="img-thumbnail" alt="cabbage">
+    <p class="let">Reduces points by one </p>
 
+
+<div class="row">
+        <img src="images/burger.png" class="img-thumbnail" alt="burger">
+        <p class="let">Increases point by one</p>
+</div>
+
+<div class="row">
             <img src="images/spacebar.png" alt="spacebar"/>
-            <p>Press to go up</p>
+            <p>Press space key to go up</p>
+</div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
@@ -71,15 +80,18 @@
   <!--GAME OVER-->
   <div class="container">
 
+
   <div class="gameOver">
     <h1>Game Over</h1>
 </div>
     <div id="win">
     <h2>You win!</h2>
+    <button type="button" class="btn btn-info btn-md" id="playAgainWin">Play again!</button>
   </div>
 
   <div id="lose">
     <h2>You lose!</h2>
+      <button type="button" class="btn btn-info btn-md" id="playAgainLose">Play again!</button>
   </div>
 
 </div>
