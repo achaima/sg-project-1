@@ -93,9 +93,9 @@
 
 
     mainLoop();
+//_____________________________________________________________________________________________
 
-
-//COLLISION SCORE
+//COLLISION BURGER - INCREASE SCORE
     function myCollisions(first , second) {
       first = first.sprite;
       second = second.sprite;
@@ -122,6 +122,7 @@
         score --;
       }
     }
+//______________________________________________________________________________________
 
   //SCORE FUNCTION
     function drawScore() {
